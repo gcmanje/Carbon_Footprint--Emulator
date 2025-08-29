@@ -5,18 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up - Carbon Footprint Emulator</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <!-- Firebase Auth -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
 </head>
 <body>
+  
   <div class="auth-container">
-    <h1>Sign Up</h1>
+    <h1>Carbon_Footprint_Emulator</h1>
+     <h2>Sign Up</h2>
+    <div class="row">
+      <div class="col-6">
+        
+     
     <form id="signup-form">
       <input type="email" id="signup-email" placeholder="Email" required>
       <input type="password" id="signup-password" placeholder="Password" required>
+        <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
       <button type="submit">Sign Up</button>
     </form>
+    </div>
     <p id="signup-error-message"></p>
     <p>Already have an account? <a href="./LoginPage.html">Login here</a></p>
   </div>
+  <script src="../Firebase/firebase-config.js"></script>
   <script src="../assets/js/auth.js"></script>
 </body>
 </html>

@@ -43,8 +43,7 @@ if (loginForm) {
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
         // Signed in successfully
-        alert("Login successful!");
-        window.location.href = "../index.html"; // Redirect to the main app page
+        window.location.href = "../components/DashboardPage.html"; // Redirect to the dashboard
       })
       .catch((error) => {
         // Handle errors

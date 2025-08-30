@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Carbon Footprint Emulator</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <!-- Firebase Auth -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>Carbon Footprint Dashboard</h1>
+      <button id="logout-btn" class="btn-logout">Logout</button>
+    </header>
+    
+    <main class="dashboard-content">
+      <section class="carbon-stats">
+        <div class="stat-card">
+          <h3>Your Carbon Footprint</h3>
+          <div class="stat-value" id="total-footprint">0 kg CO₂</div>
+          <div class="stat-change" id="footprint-change">
+            <i class="fas fa-arrow-up"></i> 5% from last month
+          </div>
+        </div>
+      </section>
+
+      <section class="ai-insights">
+        <h2><i class="fas fa-robot"></i> AI-Powered Insights</h2>
+        <div class="insights-container" id="ai-insights-container">
+          <div class="loading-spinner"></div>
+          <p>Analyzing your carbon footprint data...</p>
+        </div>
+        <button id="refresh-insights" class="btn-primary">
+          <i class="fas fa-sync-alt"></i> Refresh Insights
+        </button>
+      </section>
+
+      <section class="footprint-breakdown">
+        <h2>Breakdown</h2>
+        <div class="breakdown-grid">
+          <div class="breakdown-item">
+            <h4>Transportation</h4>
+            <div class="progress-bar">
+              <div class="progress" style="width: 45%;"></div>
+            </div>
+            <span class="breakdown-percent">45%</span>
+          </div>
+          <!-- Add more breakdown items as needed -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../Firebase/firebase-config.js"></script>
+  <script type="module" src="../assets/js/dashboard.js"></script>
+</body>
+</html>
